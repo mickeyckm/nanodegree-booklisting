@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">BookListing</string>
+    <string name="query_hint">Enter a topic (e.g. Android)</string>
+    <string name="search_btn_title">Search</string>
+    <string name="result_empty">No books found.</string>
+    <string name="toast_no_network">No network connection</string>
+    <string name="toast_query_empty">Search query cannot be blank</string>
+</resources>
