@@ -59,7 +59,13 @@ public class BookAdapter extends ArrayAdapter<Book> {
 
         viewHolder.imageView.setVisibility(View.INVISIBLE);
         viewHolder.nameTextView.setText(book.getName());
-        viewHolder.authorsTextView.setText("by " + book.getAuthors());
+        if (book.hasAuthors()) {
+            viewHolder.authorsTextView.setText("by " + book.getAuthors());
+            viewHolder.authorsTextView.setVisibility(View.VISIBLE);
+        }
+        else {
+            viewHolder.authorsTextView.setVisibility(View.GONE);
+        }
         new DownloadImageAsyncTask(viewHolder.imageView)
                 .execute(book.getImageUrl());
 
